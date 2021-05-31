@@ -1,18 +1,18 @@
 import { useForm } from 'react-hook-form'
 
 interface TravelComparisonFormProps {
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: TravelComparisonFormData) => void;
 }
 
-interface FormData {
-  car: string;
+export interface TravelComparisonFormData {
+  car: 'carA' | 'carB' | 'carC';
   distance: string;
   speed1: string;
   speed2: string;
 }
 
 export const TravelComparisonForm = ({ onSubmit }: TravelComparisonFormProps) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<TravelComparisonFormData>();
 
   return(
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -23,7 +23,7 @@ export const TravelComparisonForm = ({ onSubmit }: TravelComparisonFormProps) =>
         <option value='carC'>Auto C (4.0l / 100km)</option>
       </select>
 
-      <label htmlFor='distance'>Matka (m)</label>
+      <label htmlFor='distance'>Matka (km)</label>
       <input id='distance' {...register('distance')} />
 
       <label htmlFor='speed1'>Nopeus 1 (km/h)</label>
