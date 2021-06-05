@@ -10,6 +10,7 @@ My submission for the solidabis 2021 coding challenge. The app compares travel t
 
 ### Prerequisites
 + npm >= 6.14.4
++ node >= 10.19.0
 
 ### Installing
 ```
