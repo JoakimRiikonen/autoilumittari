@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css'
 import { ResultsTable } from './components/ResultsTable';
 import { TravelComparisonForm, TravelComparisonFormData } from './components/TravelComparisonForm'
+import car from './assets/car.svg'
 import { TravelResults, TravelResult } from './interfaces/TravelResults';
 
 function App() {
@@ -59,7 +60,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
+      <img src={car} className="carImage" />
+      <h2>Autoilumittari</h2>
       <TravelComparisonForm
         onSubmit={calculateResults}
       />
