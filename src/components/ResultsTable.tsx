@@ -9,11 +9,12 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
 
   /**
    * Formats time in seconds to a string as hours, minutes, seconds
+   * Seconds are rounded to nearest whole second
    * @param seconds time in seconds
    * @return time as string in format {hours}h {minutes}m {seconds}s
    */
   const formatTime = (seconds: number): string => {
-    const timeSeconds = Math.floor(seconds % 60)
+    const timeSeconds = Math.round(seconds % 60)
     const timeMinutes = Math.floor((seconds / 60) % 60)
     const timeHours = Math.floor(seconds / (60 * 60))
     
