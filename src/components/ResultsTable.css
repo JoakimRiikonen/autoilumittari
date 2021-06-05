@@ -4,11 +4,13 @@ table {
   text-align: left;
   border-collapse: collapse;
   border: 1px solid #bbb;
+  table-layout: fixed;
 }
 
 th, td {
   border-bottom: 1px solid #bbb;
   padding: 12px;
+  overflow-wrap: break-word;
 }
 
 caption {
