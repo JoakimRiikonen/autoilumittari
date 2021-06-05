@@ -38,24 +38,26 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
   return (
     <table>
       <caption>Matka-aika ja bensan kulutus autolla {results.car}</caption>
-      <tr>
-        <th></th>
-        <th>{results.speed1.speed} km/h</th>
-        <th>{results.speed2.speed} km/h</th>
-        <th>Ero</th>
-      </tr>
-      <tr>
-        <th>Aika</th>
-        <td>{formatTime(results.speed1.time)}</td>
-        <td>{formatTime(results.speed2.time)}</td>
-        <td>{formatTime(results.speed2.time - results.speed1.time)}</td>
-      </tr>
-      <tr>
-        <th>Kulutus</th>
-        <td>{results.speed1.fuelSpent.toFixed(2)} l</td>
-        <td>{results.speed2.fuelSpent.toFixed(2)} l</td>
-        <td>{(results.speed2.fuelSpent-results.speed1.fuelSpent).toFixed(2)} l</td>
-      </tr>
+      <tbody>
+        <tr>
+          <th></th>
+          <th>{results.speed1.speed} km/h</th>
+          <th>{results.speed2.speed} km/h</th>
+          <th>Ero</th>
+        </tr>
+        <tr>
+          <th>Aika</th>
+          <td>{formatTime(results.speed1.time)}</td>
+          <td>{formatTime(results.speed2.time)}</td>
+          <td>{formatTime(results.speed2.time - results.speed1.time)}</td>
+        </tr>
+        <tr>
+          <th>Kulutus</th>
+          <td>{results.speed1.fuelSpent.toFixed(2)}l</td>
+          <td>{results.speed2.fuelSpent.toFixed(2)}l</td>
+          <td>{(results.speed2.fuelSpent-results.speed1.fuelSpent).toFixed(2)}l</td>
+        </tr>
+      </tbody>
     </table>
   )
 }

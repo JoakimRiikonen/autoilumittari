@@ -10,7 +10,6 @@ function App() {
   const [travelResults, setTravelResults] = useState<TravelResults | undefined>(undefined);
 
   const calculateResults = (data: TravelComparisonFormData) => {
-    console.log(data);
     let fuelUsage: number = 0;
     let car: string
     switch (data.car){
@@ -34,7 +33,6 @@ function App() {
       speed2: calculateResult(Number(data.distance), Number(data.speed2),  fuelUsage)
     }
 
-    console.log(results)
     setTravelResults(results);
   }
   /**
