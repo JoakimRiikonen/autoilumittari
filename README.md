@@ -22,5 +22,5 @@ npm start
 ```
 
 ## Built using
-+ [TypeScript](https://www.typescriptlang.org/download)
++ [TypeScript](https://www.typescriptlang.org/)
 + [React](https://reactjs.org/)
