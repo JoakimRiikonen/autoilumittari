@@ -29,6 +29,7 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
 
   return (
     <table>
+      <caption>Matka-aika ja bensan kulutus autolla {results.car}</caption>
       <tr>
         <th></th>
         <th>{results.speed1.speed} km/h</th>

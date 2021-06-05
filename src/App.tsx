@@ -11,19 +11,24 @@ function App() {
   const calculateResults = (data: TravelComparisonFormData) => {
     console.log(data);
     let fuelUsage: number = 0;
+    let car: string
     switch (data.car){
       case 'carA':
+        car = 'A'
         fuelUsage = 0.03
         break
       case 'carB':
+        car = 'B'
         fuelUsage = 0.035
         break
       case 'carC':
+        car= 'C'
         fuelUsage = 0.04
         break
     }
     
     const results = {
+      car: car,
       speed1: calculateResult(Number(data.distance), Number(data.speed1),  fuelUsage),
       speed2: calculateResult(Number(data.distance), Number(data.speed2),  fuelUsage)
     }

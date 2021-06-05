@@ -1,4 +1,5 @@
 export interface TravelResults {
+  car: string;
   speed1: TravelResult;
   speed2: TravelResult;
 }
