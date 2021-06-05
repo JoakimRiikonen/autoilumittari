@@ -32,6 +32,7 @@ export const TravelComparisonForm = ({ onSubmit }: TravelComparisonFormProps) =>
           <option value='carB'>Auto B (3.5l / 100km)</option>
           <option value='carC'>Auto C (4.0l / 100km)</option>
         </select>
+        <div className='error'>{errors.car?.message}</div>
       </div>
 
       <div className='full'>
