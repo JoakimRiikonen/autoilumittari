@@ -4,6 +4,8 @@ export interface TravelResults {
 }
 
 export interface TravelResult {
+  //speed in km/h
+  speed: number;
   //time in seconds
   time: number;
   //fuel spent in litres

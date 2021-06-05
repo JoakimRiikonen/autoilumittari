@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'
+import { ResultsTable } from './components/ResultsTable';
 import { TravelComparisonForm, TravelComparisonFormData } from './components/TravelComparisonForm'
 import { TravelResults, TravelResult } from './interfaces/TravelResults';
 
@@ -44,6 +45,7 @@ function App() {
     const time =  (distance * 1000) / (speed / 3.6)
     const fuelSpent = distance * fuelUsage * Math.pow(growthRate, speed - 1)
     const result: TravelResult = {
+      speed: speed,
       time: time,
       fuelSpent: fuelSpent
     }
@@ -55,6 +57,9 @@ function App() {
     <div className="App">
       <TravelComparisonForm
         onSubmit={calculateResults}
+      />
+      <ResultsTable
+        results={travelResults}
       />
     </div>
   );

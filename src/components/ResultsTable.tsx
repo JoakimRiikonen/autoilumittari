@@ -1,0 +1,51 @@
+import { TravelResults } from "../interfaces/TravelResults"
+
+interface ResultsTableProps {
+  results: TravelResults | undefined
+}
+
+export const ResultsTable = ({ results }: ResultsTableProps) => {
+
+  /**
+   * Formats time in seconds to a string as hours, minutes, seconds
+   * @param seconds time in seconds
+   * @return time as string in format {hours}h {minutes}m {seconds}s
+   */
+  const formatTime = (seconds: number): string => {
+    const timeSeconds = Math.floor(seconds % 60)
+    const timeMinutes = Math.floor((seconds / 60) % 60)
+    const timeHours = Math.floor(seconds / (60 * 60))
+    
+    return `${timeHours}h ${timeMinutes}m ${timeSeconds}s`
+  }
+
+
+  if(results === undefined){
+    return (
+      <div></div>
+    )
+  }
+
+  return (
+    <table>
+      <tr>
+        <th></th>
+        <th>{results.speed1.speed} km/h</th>
+        <th>{results.speed2.speed} km/h</th>
+        <th>Ero</th>
+      </tr>
+      <tr>
+        <th>Aika</th>
+        <td>{formatTime(results.speed1.time)}</td>
+        <td>{formatTime(results.speed2.time)}</td>
+        <td>{formatTime(results.speed1.time - results.speed2.time)}</td>
+      </tr>
+      <tr>
+        <th>Kulutus</th>
+        <td>{results.speed1.fuelSpent.toFixed(2)} l</td>
+        <td>{results.speed2.fuelSpent.toFixed(2)} l</td>
+        <td>{(results.speed1.fuelSpent-results.speed2.fuelSpent).toFixed(2)} l</td>
+      </tr>
+    </table>
+  )
+}
