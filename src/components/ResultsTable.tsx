@@ -41,13 +41,13 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
         <th>Aika</th>
         <td>{formatTime(results.speed1.time)}</td>
         <td>{formatTime(results.speed2.time)}</td>
-        <td>{formatTime(results.speed1.time - results.speed2.time)}</td>
+        <td>{formatTime(results.speed2.time - results.speed1.time)}</td>
       </tr>
       <tr>
         <th>Kulutus</th>
         <td>{results.speed1.fuelSpent.toFixed(2)} l</td>
         <td>{results.speed2.fuelSpent.toFixed(2)} l</td>
-        <td>{(results.speed1.fuelSpent-results.speed2.fuelSpent).toFixed(2)} l</td>
+        <td>{(results.speed2.fuelSpent-results.speed1.fuelSpent).toFixed(2)} l</td>
       </tr>
     </table>
   )
