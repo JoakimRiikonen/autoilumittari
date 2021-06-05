@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="app">
-      <img src={car} className="carImage" />
+      <img src={car} alt='Car' className="carImage" />
       <h2>Autoilumittari</h2>
       <TravelComparisonForm
         onSubmit={calculateResults}
