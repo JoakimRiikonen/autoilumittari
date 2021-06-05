@@ -1,0 +1,38 @@
+form {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+}
+
+div {
+  padding: 10px 0;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+}
+
+select {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 49%;
+}
+
+

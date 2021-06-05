@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'
 import { TravelComparisonForm, TravelComparisonFormData } from './containers/TravelComparisonForm'
 import { TravelResults, TravelResult } from './interfaces/TravelResults';
 
