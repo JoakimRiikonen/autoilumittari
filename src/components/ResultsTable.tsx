@@ -1,4 +1,5 @@
 import { TravelResults } from "../interfaces/TravelResults"
+import './ResultsTable.css'
 
 interface ResultsTableProps {
   results: TravelResults | undefined
