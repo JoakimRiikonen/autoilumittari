@@ -15,8 +15,15 @@ export const ResultsTable = ({ results }: ResultsTableProps) => {
    */
   const formatTime = (seconds: number): string => {
     const timeSeconds = Math.round(seconds % 60)
-    const timeMinutes = Math.floor((seconds / 60) % 60)
-    const timeHours = Math.floor(seconds / (60 * 60))
+    let timeMinutes: number
+    let timeHours: number
+    if(seconds >= 0) {
+      timeMinutes = Math.floor((seconds / 60) % 60)
+      timeHours = Math.floor(seconds / (60 * 60))
+    } else {
+      timeMinutes = Math.ceil((seconds / 60) % 60)
+      timeHours = Math.ceil(seconds / (60 * 60))
+    }
     
     return `${timeHours}h ${timeMinutes}m ${timeSeconds}s`
   }
