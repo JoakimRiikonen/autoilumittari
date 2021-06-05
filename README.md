@@ -1,6 +1,6 @@
 # Autoilumittari
 
-My submission for the solidabis 2021 coding challenge. 
+### [Live site](https://autoilumittari-joakimriikonen.netlify.app/)
 
 ## About
 
