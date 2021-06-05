@@ -10,6 +10,9 @@ table {
 th, td {
   border-bottom: 1px solid #bbb;
   padding: 12px;
+}
+
+td {
   overflow-wrap: break-word;
 }
 
