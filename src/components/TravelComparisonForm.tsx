@@ -54,7 +54,7 @@ export const TravelComparisonForm = ({ onSubmit }: TravelComparisonFormProps) =>
           <div className='error'>{errors.speed2?.message}</div>
         </div>
       <div className='full'>
-        <input type='submit' value='Laske'/>
+        <input id='submit' type='submit' value='Laske'/>
       </div>
     </form>
   )

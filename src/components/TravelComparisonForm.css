@@ -14,15 +14,15 @@ div {
 
 input {
   box-sizing: border-box;
-  width: 100%;
-  padding: 8px;
-  font-size: 18px;
 }
 
-select {
+input, select {
   width: 100%;
   font-size: 18px;
-  padding: 8px;
+  padding: 12px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .full {
@@ -38,6 +38,13 @@ select {
   height: 10px;
   padding: 0;
   margin: 0;
+}
+
+#submit {
+  background-color: var(--primaryColor);
+  border: none;
+  color: white;
+
 }
 
 
